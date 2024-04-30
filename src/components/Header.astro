@@ -3,7 +3,9 @@ import Logo from './icons/Logo.astro';
 ---
 <header class="min-h-24 fixed w-full top-0 z-50 bg-white flex justify-center border-b-[1px] border-transparent transition-all duration-500">
   <div class="2xl:max-w-screen-xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-screen-sm w-full m-auto flex justify-between items-center">
-    <Logo />
+    <a href="home" class="logo">
+      <Logo />
+    </a>
     <nav>
       <ul class="flex justify-center items-center">
         <li><a href="fundamentos-programa" class="scrolto hover:bg-[var(--accent-bg-light)] p-4 rounded-xl">Fundamentos del programa</a></li>
@@ -28,6 +30,15 @@ import Logo from './icons/Logo.astro';
 <script>
   let header = document.querySelector("header");
   let buttons = document.querySelectorAll("a.scrolto");
+  let logo = document.querySelector(".logo");
+
+  logo?.addEventListener("click", (e: Event) => {
+      e.preventDefault()
+      window.scrollTo({
+        behavior: 'smooth',
+        top: 0
+      })
+    })
 
   const scrollIntoViewWithOffset = (selector: string, offset:number) => {
     window.scrollTo({
