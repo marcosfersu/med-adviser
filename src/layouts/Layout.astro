@@ -1,6 +1,13 @@
 ---
 import Instagram from '../components/icons/Instagram.astro';
 import Header from '../components/Header.astro';
+import '@fontsource/lora/400.css';
+import '@fontsource/lora/500.css';
+import '@fontsource/lora/400-italic.css';
+import '@fontsource/lora/500-italic.css';
+import '@fontsource/montserrat/400.css';
+import '@fontsource/montserrat/700.css';
+
 
 interface Props {
 	title: string;
@@ -48,8 +55,15 @@ const { title } = Astro.props;
 		);
 	}
 	html {
-		font-family: system-ui, sans-serif;
+		font-family: 'Lora', serif;
 		background: #fff;
 		background-size: 224px;
+	}
+	p, button, a{
+		font-family: 'Montserrat', sans-serif;
+	}
+
+	.lora {
+		font-family: 'Lora', serif;
 	}
 </style>
