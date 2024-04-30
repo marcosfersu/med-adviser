@@ -1,0 +1,18 @@
+.accordion hr {
+  @apply bg-[var(--accent)] h-[1px];
+}
+
+.accordion button span {
+}
+
+.icon-accordion {
+  @apply rotate-180;
+}
+
+.accordion h2 > button > div {
+  @apply flex-col-reverse;
+}
+
+.accordion h2[data-open="true"] .icon-accordion {
+  @apply rotate-90;
+}
