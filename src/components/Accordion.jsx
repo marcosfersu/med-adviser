@@ -49,14 +49,14 @@ export default function App() {
           }
           className="accordion-item"
         >
-          <article className="mb-4 flex flex-col gap-3 [&>div>p]:text-xl ">
+          <ul className="mb-4 flex flex-col gap-3 [&>div>p]:text-xl ">
             {content?.map((content, index) => (
-              <div key={index} className="flex items-center gap-4">
+              <li key={index} className="flex items-center gap-4">
                 <SmallArrow />
                 <p>{content}</p>
-              </div>
+              </li>
             ))}
-          </article>
+          </ul>
         </AccordionItem>
       ))}
     </Accordion>
