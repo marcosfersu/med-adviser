@@ -1,0 +1,47 @@
+---
+import Logo from './icons/Logo.astro';
+---
+<header class="min-h-24 2xl:max-w-screen-xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-screen-sm m-auto flex justify-between items-center">
+  <Logo />
+  <nav>
+    <ul class="flex gap-10 justify-center items-center">
+      <li><a href="fundamentos-programa" class="scrolto">Fundamentos del programa</a></li>
+      <li><a href="objetivos" class="scrolto">Objetivos</a></li>
+      <li><a href="incluye" class="scrolto">Qué incluye ?</a></li>
+      <li><a href="perfil" class="scrolto">Perfil</a></li>
+      <li><a href="estudio" class="scrolto">Plan de estudio</a></li>
+      <li><a href="about" class="scrolto">Sobre mi</a></li>
+      <li><button class="center py-2 px-6 rounded-full bg-[var(--accent)] text-white font-bold">Inscribirme</button></li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  let buttons = document.querySelectorAll("a.scrolto");
+
+  const scrollIntoViewWithOffset = (selector: string, offset:number) => {
+  window.scrollTo({
+    behavior: 'smooth',
+    top:
+      document.querySelector(selector).getBoundingClientRect().top -
+      document.body.getBoundingClientRect().top -
+      offset,
+  })
+  } 
+
+  buttons?.forEach(button => {
+    button.addEventListener("click", (e: Event) => {
+      e.preventDefault()
+        const target = (e.currentTarget as HTMLAnchorElement)?.getAttribute('href')
+
+        // document.querySelector(`.${target}`)?.scrollIntoView({
+        //   behavior: 'smooth',
+        //   block: 'start'
+        // });
+
+        scrollIntoViewWithOffset(`.${target}`, 60)
+    })
+  })
+
+  
+</script>
