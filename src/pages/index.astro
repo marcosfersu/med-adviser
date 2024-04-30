@@ -15,12 +15,12 @@ import {ProgramData} from "./../libs/data.ts"
 	<main>
     <section class="h-[80vh] relative">
       <div class="2xl:max-w-screen-xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-screen-sm m-auto h-full flex">
-        <div class="w-1/2 flex justify-start items-center h-full ">
-          <div class="w-96 z-10">
-            <h1 class="text-[color:var(--accent)] font-medium text-5xl mb-5">Practice Growth <span class="block italic">Bootcamp</span></h1>
-            <p class="mb-6">El programa busca desarrollar nuevas habilidades para gerenciar su práctica y llevarla a otro nivel. Se enfoca en optimizar recursos, maximizar la rentabilidad y mejorar la experiencia del paciente para lograrlo</p>
-            <p class="font-medium mb-8">Se parte de nuestro programa!</p>
-            <button class="center py-2 px-12 rounded bg-[var(--accent)] text-white">Inscribirme</button>
+        <div class="w-1/2 flex justify-start items-center h-full pr-10">
+          <div class="z-10">
+            <h1 class="text-[color:var(--accent)] font-medium text-6xl mb-5">Practice Growth <span class="block italic">Bootcamp</span></h1>
+            <p class="lora font-medium italic text-2xl mb-8">Llevá tu consultorio al siguiente nivel</p>
+            <p class="mb-10">El programa busca desarrollar nuevas habilidades para gerenciar su práctica y llevarla a otro nivel. Se enfoca en optimizar recursos, maximizar la rentabilidad y mejorar la experiencia del paciente para lograrlo</p>
+            <button class="center py-2 px-12 rounded-full bg-[var(--accent)] text-white font-bold">Quiero inscribirme!</button>
           </div>
           <img class="object-cover h-full w-1/2 absolute left-0 z-0"  src="./main-img-2.webp" alt="">
         </div>
@@ -100,13 +100,13 @@ import {ProgramData} from "./../libs/data.ts"
     </section>
     <section class="incluye gradient-bg py-32">
       <div class="2xl:max-w-screen-xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-screen-sm m-auto flex">
-        <h2 class="w-1/3 text-5xl text-[color:var(--accent)] font-semibold">El Programa <span class="block">incluye:</span></h2>
+        <h2 class="w-1/3 text-5xl text-[color:var(--accent)] font-medium">El Programa <span class="block">incluye:</span></h2>
         <div class="w-2/3">
           <ul class="mb-10">
             {ProgramData?.map(item => (
             <li>
               <div class="flex items-center gap-5 py-4">
-                <Arrow /><p class="text-xl">{item}</p>
+                <Arrow /><p class="text-xl lora">{item}</p>
               </div>
               <hr class="border-t-[1px] border-[var(--accent)]  text-[color:var(--acccent)] " />
             </li>
@@ -117,8 +117,8 @@ import {ProgramData} from "./../libs/data.ts"
       </div>
     </section>
     <section class="perfil 2xl:max-w-screen-xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-screen-sm m-auto my-32">
-      <h2 class="text-5xl text-[color:var(--accent)] font-semibold mb-8">Perfil</h2>
-      <p class="italic leading-[1.3] text-xl">Dirigido a Profesionales de la salud de cualquier especialidad que:</p>
+      <h2 class="text-5xl text-[color:var(--accent)] font-medium mb-8">Perfil</h2>
+      <p class="italic leading-[1.3] text-xl lora">Dirigido a Profesionales de la salud de cualquier especialidad que:</p>
       <ul class="flex [&>li]:w-1/3 [&>li]:pr-12 [&>li]:mt-8 [&>li]:italic flex-wrap mt-8">
         <li><Start class="w-4 mb-2"/>Quieren generar un crecimiento económico y no saben cómo lograrlo.</li>
         <li><Start class="w-4 mb-2"/>Necesitan desarrollar nuevas habilidades para alcanzar sus objetivos.</li>
@@ -132,17 +132,17 @@ import {ProgramData} from "./../libs/data.ts"
       <img class="object-cover w-full" src="./main-img-3.webp" alt="">
     </section>
     <section class="estudio 2xl:max-w-screen-xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-screen-sm m-auto my-32">
-      <h2 class="text-5xl text-[color:var(--accent)] font-semibold mb-8">Plan de estudio</h2>
+      <h2 class="text-5xl text-[color:var(--accent)] font-medium mb-8">Plan de estudio</h2>
       <Accordion client:visible/>
       <button class="center py-2 px-12 rounded-full bg-[var(--accent)] text-white font-bold mt-10">Quiero inscribirme!</button>
     </section>
     <section class="about 2xl:max-w-screen-xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-screen-sm m-auto mb-32 mt-48 flex gap-10">
       <div class="w-1/2 [&>p]:mb-6 ">
         <small class="italic text-xl">Directora</small>
-        <h3 class="text-6xl text-[color:var(--accent)] mb-8">Paz Martorell</h3>
-        <p class="italic">Especialista en Marketing Médico, Patient Experience 
+        <h3 class="text-6xl text-[color:var(--accent)] mb-8 font-medium">Paz Martorell</h3>
+        <p class="italic lora">Especialista en Marketing Médico, Patient Experience 
           y Healthcare Management.</p>
-        <p class="italic">
+        <p class="italic lora">
           Directora del MicroMaster de Liderazgo & 
           Satisfacción de Pacientes de la UCA.</p>
         <p>Fundadora de MedAdviser, consultora que hace más de 10 años acompaña a médicos para que transformen la forma en la que prestan sus servicios, para que operen negocios más rentables, brinden una mejor experiencia a sus pacientes y disfruten más de su profesión.</p>

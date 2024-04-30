@@ -40,10 +40,10 @@ export default function App() {
         <AccordionItem
           key={id}
           aria-label={title}
-          title={<span className="text-2xl">{title}</span>}
+          title={<span className="text-2xl lora">{title}</span>}
           indicator={<AnchorIcon />}
           subtitle={
-            <span className="text-sm text-[color:var(--accent)] ">
+            <span className="text-sm text-[color:var(--accent)] lora">
               {preTitle}
             </span>
           }
