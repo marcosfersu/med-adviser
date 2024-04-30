@@ -48,7 +48,7 @@ import Logo from './icons/Logo.astro';
   })
 
   window.addEventListener("scroll", (e: Event) => {
-    (window.scrollY > 600) 
+    (window.scrollY >= 600) 
     ? header?.classList.add("header-h")
     : header?.classList.remove("header-h")
   })
