@@ -20,14 +20,14 @@ import Logo from './icons/Logo.astro';
   let buttons = document.querySelectorAll("a.scrolto");
 
   const scrollIntoViewWithOffset = (selector: string, offset:number) => {
-  window.scrollTo({
-    behavior: 'smooth',
-    top:
-      document.querySelector(selector).getBoundingClientRect().top -
+    window.scrollTo({
+      behavior: 'smooth',
+      top:
+      (document.querySelector(selector) as HTMLElement).getBoundingClientRect().top -
       document.body.getBoundingClientRect().top -
       offset,
-  })
-  } 
+    })
+  }
 
   buttons?.forEach(button => {
     button.addEventListener("click", (e: Event) => {
