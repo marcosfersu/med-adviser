@@ -1,7 +1,7 @@
 ---
 import Logo from './icons/Logo.astro';
 ---
-<header class="min-h-24 fixed w-full top-0 z-50 bg-white flex justify-center border-b-[1px] border-[var(--accent)] transition-all duration-500">
+<header class="min-h-24 fixed w-full top-0 z-50 bg-white flex justify-center border-b-[1px] border-transparent transition-all duration-500">
   <div class="2xl:max-w-screen-xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-screen-sm w-full m-auto flex justify-between items-center">
     <Logo />
     <nav>
@@ -21,6 +21,7 @@ import Logo from './icons/Logo.astro';
 <style>
   .header-h {
     min-height: 4rem;
+    border-color: var(--accent);
   }
 </style>
 
