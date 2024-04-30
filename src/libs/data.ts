@@ -1,3 +1,5 @@
+import { m } from "framer-motion";
+
 export type IProgramData = string;
 
 export const ProgramData: IProgramData[] = [
@@ -34,12 +36,11 @@ export const AccordionData: IAccordionData[] = [
     title: "La Experiencia del Paciente",
     preTitle: "MÓDULO II",
     content: [
-      "Marketing y su evolución",
-      "Personal Branding",
-      "¿Cómo diferenciarnos en un entorno cada vez más competitivo?",
-      "Marketing Digital",
-      "Pasos para planear y ejecutar una estrategia digital",
-      "Principales errores en el uso de redes sociales",
+      "¿Cómo eligen los pacientes?",
+      "Patient journey",
+      "¿Cómo conducir una consulta exitosa?",
+      "Negociación con el paciente",
+      "Fidelización de pacientes",
     ],
   },
   {
@@ -47,12 +48,11 @@ export const AccordionData: IAccordionData[] = [
     title: "¿Cómo aumentar mis Ventas?",
     preTitle: "MÓDULO III",
     content: [
-      "Marketing y su evolución",
-      "Personal Branding",
-      "¿Cómo diferenciarnos en un entorno cada vez más competitivo?",
-      "Marketing Digital",
-      "Pasos para planear y ejecutar una estrategia digital",
-      "Principales errores en el uso de redes sociales",
+      "La venta como proceso",
+      "Diferentes etapas de la venta",
+      "Venta tradicional Vs. Venta profesional",
+      "Protocolos de venta",
+      "Neuroventas",
     ],
   },
   {
@@ -60,12 +60,10 @@ export const AccordionData: IAccordionData[] = [
     title: "Liderazgo & Equipos de Alto Rendimiento",
     preTitle: "MÓDULO IV",
     content: [
-      "Marketing y su evolución",
-      "Personal Branding",
-      "¿Cómo diferenciarnos en un entorno cada vez más competitivo?",
-      "Marketing Digital",
-      "Pasos para planear y ejecutar una estrategia digital",
-      "Principales errores en el uso de redes sociales",
+      "El rol del líder",
+      "Habilidades de coaching",
+      "Pasos para la incorporación de personal",
+      "Motivación e incentivos",
     ],
   },
   {
@@ -73,12 +71,12 @@ export const AccordionData: IAccordionData[] = [
     title: "Management de médico a empresario",
     preTitle: "MÓDULO V",
     content: [
-      "Marketing y su evolución",
-      "Personal Branding",
-      "¿Cómo diferenciarnos en un entorno cada vez más competitivo?",
-      "Marketing Digital",
-      "Pasos para planear y ejecutar una estrategia digital",
-      "Principales errores en el uso de redes sociales",
+      "Diferentes roles del manager",
+      "Información y métricas para la toma de decisiones",
+      "Gestión en base a objetivos",
+      "Evaluación de resultados y de comportamientos",
+      "La información como activo estratégico",
+      "Cómo lograr comportamientos a través de otros. Delegación efectiva",
     ],
   },
   {
@@ -86,12 +84,8 @@ export const AccordionData: IAccordionData[] = [
     title: "Productividad",
     preTitle: "MÓDULO VI",
     content: [
-      "Marketing y su evolución",
-      "Personal Branding",
-      "¿Cómo diferenciarnos en un entorno cada vez más competitivo?",
-      "Marketing Digital",
-      "Pasos para planear y ejecutar una estrategia digital",
-      "Principales errores en el uso de redes sociales",
+      "Gestión del Tiempo",
+      "Estrategias para aumentar su productividad",
     ],
   },
 ];
