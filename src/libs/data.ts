@@ -1,3 +1,13 @@
+export type IProgramData = string;
+
+export const ProgramData: IProgramData[] = [
+  "Acceso a las grabaciones de las clases.",
+  "Material de apoyo con el resumen de cada clase.",
+  "Guías paso a paso, plantillas y workbooks para implementar los conceptos teóricos en su consultorio.",
+  "Scripts para que adapte y entregue a su staff.",
+  "Acceso a una sesión del Health Experience Mastermind.",
+];
+
 export interface IAccordionData {
   id: number;
   title: string;

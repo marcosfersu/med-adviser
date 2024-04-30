@@ -7,6 +7,8 @@ import Arrow from '../components/icons/Arrow.astro';
 import Calendar from '../components/icons/Calendar.astro';
 import Accordion from '../components/Accordion.jsx';
 import Layout from '../layouts/Layout.astro';
+
+import {ProgramData} from "./../libs/data.ts"
 ---
 
 <Layout title="Welcome to Astro.">
@@ -101,15 +103,14 @@ import Layout from '../layouts/Layout.astro';
         <h2 class="w-1/3 text-5xl text-[color:var(--accent)] font-semibold">El Programa <span class="block">incluye:</span></h2>
         <div class="w-2/3">
           <ul class="mb-10">
-            <li class="flex items-center gap-5 py-4"><Arrow /><p class="text-xl">Acceso a las grabaciones de las clases.</p></li>
-            <hr class="border-t-[1px] border-[var(--accent)]  text-[color:var(--acccent)] " />
-            <li class="flex items-center gap-5 py-4"><Arrow /><p class="text-xl">Material de apoyo con el resumen de cada clase.</p></li>
-            <hr class="border-t-[1px] border-[var(--accent)]  text-[color:var(--acccent)] " />
-            <li class="flex items-center gap-5 py-4"><Arrow /><p class="text-xl">Guías paso a paso, plantillas y workbooks para implementar los conceptos teóricos en su consultorio.</p></li>
-            <hr class="border-t-[1px] border-[var(--accent)]  text-[color:var(--acccent)] " />
-            <li class="flex items-center gap-5 py-4"><Arrow /><p class="text-xl">Scripts para que adapte y entregue a su staff.</p></li>
-            <hr class="border-t-[1px] border-[var(--accent)]  text-[color:var(--acccent)] " />
-            <li class="flex items-center gap-5 py-4"><Arrow /><p class="text-xl">Acceso a una sesión del Health Experience Mastermind.</p></li>
+            {ProgramData?.map(item => (
+            <li>
+              <div class="flex items-center gap-5 py-4">
+                <Arrow /><p class="text-xl">{item}</p>
+              </div>
+              <hr class="border-t-[1px] border-[var(--accent)]  text-[color:var(--acccent)] " />
+            </li>
+            ))}
           </ul>
           <button class="center py-2 px-12 rounded-full bg-[var(--accent)] text-white font-bold">Quiero inscribirme!</button>
         </div>
@@ -131,7 +132,9 @@ import Layout from '../layouts/Layout.astro';
       <img class="object-cover w-full" src="./main-img-3.webp" alt="">
     </section>
     <section class="2xl:max-w-screen-xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-screen-sm m-auto my-32">
+      <h2 class="text-5xl text-[color:var(--accent)] font-semibold mb-8">Plan de estudio</h2>
       <Accordion client:visible/>
+      <button class="center py-2 px-12 rounded-full bg-[var(--accent)] text-white font-bold mt-10">Quiero inscribirme!</button>
     </section>
 	</main>
 </Layout>
