@@ -5,6 +5,7 @@ import Desktop from '../components/icons/Desktop.astro';
 import Start from '../components/icons/Start.astro';
 import Arrow from '../components/icons/Arrow.astro';
 import Calendar from '../components/icons/Calendar.astro';
+import Accordion from '../components/Accordion.jsx';
 import Layout from '../layouts/Layout.astro';
 ---
 
@@ -128,6 +129,9 @@ import Layout from '../layouts/Layout.astro';
     </section>
     <section class="w-full">
       <img class="object-cover w-full" src="./main-img-3.webp" alt="">
+    </section>
+    <section class="2xl:max-w-screen-xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-screen-sm m-auto my-32">
+      <Accordion client:visible/>
     </section>
 	</main>
 </Layout>
