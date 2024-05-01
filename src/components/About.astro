@@ -9,19 +9,19 @@ const {AboutData} = Astro.props
 const {prehead, head, btn, image, paragraph} = AboutData
 ---
 
-<section class="about 2xl:max-w-screen-xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-screen-sm m-auto mb-32 mt-48 flex gap-10">
-  <div class="w-1/2 [&>p]:mb-6 ">
-    <small class="italic text-xl">{prehead}</small>
-    <h3 class="text-6xl text-[color:var(--accent)] mb-8 font-medium">{head}</h3>
+<section class="about 2xl:max-w-screen-xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-screen-sm m-auto mb-20 md:mb-32 md:mt-48 mt-32 px-6 flex flex-col md:flex-row gap-10">
+  <div class="md:w-1/2 w-full [&>p]:md:mb-6 [&>p]:mb-4 [&>p]:w-full">
+    <small class="italic text-xl md:mb-0 mb-4 block">{prehead}</small>
+    <h3 class="md:text-6xl text-5xl text-[color:var(--accent)] md:mb-8 mb-6 font-medium">{head}</h3>
     <p class="italic lora">{paragraph.one}</p>
-    <p class="italic lora">{paragraph.two}</p>
+    <p class="italic lora !mb-8">{paragraph.two}</p>
     <p>{paragraph.three}</p>
     <p>{paragraph.four}</p>
     <p>{paragraph.five}</p>
     <p>{paragraph.six}</p>
-      <button class="center py-2 px-20 mt-10 rounded-full bg-[var(--accent)] text-white font-bold">{btn}</button>
+      <button class="center py-2 px-20 mt-10 rounded-full bg-[var(--accent)] text-white font-bold w-full md:w-auto">{btn}</button>
   </div>
-  <div class="w-1/2 h-full">
+  <div class="md:w-1/2 w-full h-full">
     <img class="object-cover w-full" src={image.img} alt={image.alt}>
   </div>
 </section>
