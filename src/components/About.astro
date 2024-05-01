@@ -1,0 +1,27 @@
+---
+import type { IAboutData } from "../libs/type.d.ts"
+
+interface Props {
+	AboutData :IAboutData
+}
+
+const {AboutData} = Astro.props
+const {prehead, head, btn, image, paragraph} = AboutData
+---
+
+<section class="about 2xl:max-w-screen-xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-screen-sm m-auto mb-32 mt-48 flex gap-10">
+  <div class="w-1/2 [&>p]:mb-6 ">
+    <small class="italic text-xl">{prehead}</small>
+    <h3 class="text-6xl text-[color:var(--accent)] mb-8 font-medium">{head}</h3>
+    <p class="italic lora">{paragraph.one}</p>
+    <p class="italic lora">{paragraph.two}</p>
+    <p>{paragraph.three}</p>
+    <p>{paragraph.four}</p>
+    <p>{paragraph.five}</p>
+    <p>{paragraph.six}</p>
+      <button class="center py-2 px-20 mt-10 rounded-full bg-[var(--accent)] text-white font-bold">{btn}</button>
+  </div>
+  <div class="w-1/2 h-full">
+    <img class="object-cover w-full" src={image.img} alt={image.alt}>
+  </div>
+</section>
