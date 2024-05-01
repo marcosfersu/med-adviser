@@ -1,0 +1,29 @@
+---
+import type { IGoalData } from "../libs/type.d.ts"
+
+interface Props {
+	GoalData :IGoalData
+}
+
+const {GoalData} = Astro.props
+const {head, image, paragraph} = GoalData
+---
+
+<section class="objetivos 2xl:max-w-screen-xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-screen-sm m-auto my-36">
+  <div class="flex gap-10">
+  <div class="w-1/2">
+    <h2  class="text-[color:var(--accent)] font-medium text-5xl mb-12">{head}</h2>
+    <p class="mb-6">{paragraph.one} 
+    </p>  
+    <p class="mb-6">
+      {paragraph.two}                
+    </p>  
+    <p class="mb-6 font-bold">
+      {paragraph.three}               
+    </p>  
+  </div>
+  <div class="w-1/2 mb-6">
+    <img class="w-full" src={image.img} alt={image.alt}>
+  </div>  
+  </div>
+</section>
