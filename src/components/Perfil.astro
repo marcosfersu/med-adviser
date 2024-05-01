@@ -1,0 +1,21 @@
+---
+import Start from "./icons/Start.astro";
+import type { IPerfiltData } from "../libs/type.d.ts"
+
+interface Props {
+	PerfiltData :IPerfiltData
+}
+
+const {PerfiltData} = Astro.props
+const {head, text, list} = PerfiltData
+---
+
+<section class="perfil 2xl:max-w-screen-xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-screen-sm m-auto my-32">
+  <h2 class="text-5xl text-[color:var(--accent)] font-medium mb-8">{head}</h2>
+  <p class="italic leading-[1.3] text-xl lora">{text}</p>
+  <ul class="flex [&>li]:w-1/3 [&>li]:pr-12 [&>li]:mt-8 [&>li]:italic flex-wrap mt-8">
+    {list?.map(item=> (
+      <li><Start class="w-4 mb-2"/>{item}</li>
+    ))}
+  </ul>
+</section>
