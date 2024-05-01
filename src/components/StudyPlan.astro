@@ -1,0 +1,17 @@
+---
+import Accordion from '../components/Accordion.jsx';
+import type { IStudyPlanData } from "../libs/type.d.ts"
+
+interface Props {
+	StudyPlanData :IStudyPlanData
+}
+
+const {StudyPlanData} = Astro.props
+const {head, accordion, btn} = StudyPlanData
+--- 
+
+<section class="estudio 2xl:max-w-screen-xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-screen-sm m-auto my-32">
+  <h2 class="text-5xl text-[color:var(--accent)] font-medium mb-8">{head}</h2>
+  <Accordion accordionData={accordion} client:visible/>
+  <button class="center py-2 px-12 rounded-full bg-[var(--accent)] text-white font-bold mt-10">{btn}</button>
+</section>
