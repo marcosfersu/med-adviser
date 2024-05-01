@@ -9,17 +9,17 @@ const {FundamentalsData} = Astro.props
 const {head, subhead, paragraph} = FundamentalsData
 ---
 
-<section class="fundamentos-programa 2xl:max-w-screen-xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-screen-sm m-auto my-36">
-  <h2  class="text-[color:var(--accent)] font-medium text-5xl mb-12">{head}</h2>
-  <div class="flex gap-10">
-  <div class="w-1/2">
+<section class="fundamentos-programa 2xl:max-w-screen-xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-screen-sm m-auto my-20 md:my-36 px-6">
+  <h2  class="text-[color:var(--accent)] font-medium lg:text-5xl text-4xl mb-12">{head}</h2>
+  <div class="flex flex-col lg:flex-row lg:gap-10">
+  <div class="lg:w-1/2 w-full">
     <p class="font-bold mb-6">{subhead}
     </p>  
     <p class="mb-6">
       {paragraph.one}        
     </p>  
   </div>
-  <div class="w-1/2 mb-6">
+  <div class="lg:w-1/2 w-full mb-6">
     <p class="mb-6">
       {paragraph.two}
     </p>  
