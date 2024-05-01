@@ -1,0 +1,31 @@
+---
+import type { IFundamentalsData } from "../libs/type.d.ts"
+
+interface Props {
+	FundamentalsData :IFundamentalsData
+}
+
+const {FundamentalsData} = Astro.props
+const {head, subhead, paragraph} = FundamentalsData
+---
+
+<section class="fundamentos-programa 2xl:max-w-screen-xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-screen-sm m-auto my-36">
+  <h2  class="text-[color:var(--accent)] font-medium text-5xl mb-12">{head}</h2>
+  <div class="flex gap-10">
+  <div class="w-1/2">
+    <p class="font-bold mb-6">{subhead}
+    </p>  
+    <p class="mb-6">
+      {paragraph.one}        
+    </p>  
+  </div>
+  <div class="w-1/2 mb-6">
+    <p class="mb-6">
+      {paragraph.two}
+    </p>  
+    <p class="mb-6">
+      {paragraph.three}     
+    </p>  
+  </div>  
+  </div>
+</section>
