@@ -1,0 +1,25 @@
+---
+import type { IInfoShortData } from "../libs/type.d.ts";
+import CardIcon from "./CardIcon.astro";
+import Calendar from "./icons/Calendar.astro";
+import Clock from "./icons/Clock.astro";
+import Desktop from "./icons/Desktop.astro";
+
+interface Props {
+	InfoShortData :IInfoShortData
+}
+
+const {InfoShortData} = Astro.props 
+---
+
+<section class="2xl:max-w-screen-xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-screen-sm m-auto">
+  <ul class="my-28 flex justify-between">
+    {InfoShortData?.map(({prehead, head, icon}) => (
+    <CardIcon small={prehead} body={head}>
+      {"clock" === icon && <Clock slot='icon' class="mb-8"/>}
+      {"desktop" === icon && <Desktop slot='icon' class="mb-8"/>}
+      {"calendar" === icon && <Calendar slot='icon' class="mb-8"/>}
+    </CardIcon>
+    ))}
+  </ul>
+</section>
