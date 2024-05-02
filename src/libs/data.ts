@@ -9,8 +9,8 @@ export const HeroData = {
     btn: "Quiero inscribirme!",
   },
   image: {
-    main: "./main-img.webp",
-    main2: "./main-img-2.webp",
+    main: { img: "./main-img.webp", alt: "Paz Martorell Perfil" },
+    main2: { img: "./main-img-2.webp", alt: "bg-img" },
   },
 };
 

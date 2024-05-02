@@ -82,7 +82,7 @@ export type IHeroData = {
     btn: string;
   };
   image: {
-    main: string;
-    main2: string;
+    main: Image;
+    main2: Image;
   };
 };
