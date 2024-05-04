@@ -1,0 +1,203 @@
+---
+const {} = Astro.props
+import Cross from './icons/Cross.astro'
+---
+<dialog class="m-auto border-none bg-black/60 inset-0 fixed w-full h-full left-0 top-0 z-[9999] overflow-y-scroll">
+    <button data-id="closeModal" type="reset" class="fixed right-0 top-0 lg:-translate-x-10 -translate-x-2 lg:translate-y-5 translate-y-2"><Cross /></button>
+    <section class="w-full dialog-bg">
+        <div class="lg:max-w-[50rem] lg:w-auto w-full m-auto bg-white lg:p-16 px-5 pb-10 pt-16 my-0 lg:my-20 rounded-md">
+            <div class="mb-10">
+                <p class="lora italic text-[color:var(--accent)] font-medium text-xl mb-3">Inscripción Practice Growth Bootcamp</p>
+                <h3 class="lora text-3xl mb-3">Estas a punto de dar el gran paso hacia el crecimiento de tu consultorio</h3>
+                <p class="font-2xl">Para escalar tu negocio lo primero que tenes que hacer es escalar tu mente. El crecimiento de tu consultorio requiere de una inversión de tiempo y dinero.</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-5 sm:gap-0 mb-10">
+                <p class="w-2/3 text-[color:var(--accent)] text-xl text-balance">La inversión requerida para participar de este programa es de</p>
+                <h2 class="w-1/3 text-[color:var(--accent)] text-5xl text-right">600USD</h2>
+            </div>
+            <form action="" method="post" class="[&>fieldset]:mb-8 [&>fieldset>legend]:mb-4 [&>ul>li]:mb-10 :font-light [&>ul>li>label]:block [&>ul>li>label]:mb-3 ">
+                <ul >
+                    <li>
+                        <label for="name">Apellido y nombre*</label>
+                        <input type="text" id="name" name="user_name" placeholder="Tu respuesta" required />
+                    </li>
+                    <li>
+                        <label for="mail">Mail*</label>
+                        <input type="email" id="mail" name="user_email" placeholder="Tu respuesta" required  />
+                    </li>
+                    <li>
+                        <label for="wp">Número de whatsapp*</label>
+                        <input type="tel" id="wp" name="user_whatsapp" placeholder="Tu respuesta" required />
+                    </li>
+                </ul>
+                <fieldset>
+                    <legend>Especialidad*</legend>
+                    <input type="radio" name="special" id="dermatologo" value="dermatologo">
+                    <label for="dermatologo">de 1 a 5 años</label><br>
+                    <input type="radio" name="special" id="cirujano" value="cirujano">
+                    <label for="cirujano">Cirujano Plástico</label><br>
+                    <input type="radio" name="special" id="medico" value="medico">
+                    <label for="medico">Médico Estético</label><br>
+                    <input type="radio" name="special" id="oftalmologo" value="oftalmologo">
+                    <label for="oftalmologo">Oftalmólogo</label><br>
+                    <input type="radio" name="special" id="odontologo" value="odontologo">
+                    <label for="odontologo">Odontólogo</label><br>
+                    <div class="flex">
+                        <input class="!mr-[.8rem]" type="radio" name="special" id="otro2I" value="otro2">
+                        <label for="otro2I">Otro:</label>
+                        <input type="text" id="otro2" class="ml-2" name="special" />
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>¿Cuántos años de experiencia tenes en tu especialidad?*</legend>
+                    <input type="radio" name="years" id="1a5" value="1a5">
+                    <label for="1a5">de 1 a 5 años</label><br>
+                    <input type="radio" name="years" id="5a10" value="5a10">
+                    <label for="5a10">Entre 5 y 10 años</label><br>
+                    <input type="radio" name="years" id="10plus" value="10plus">
+                    <label for="10plus">Más de 10 años</label>
+                </fieldset>
+                <fieldset>
+                    <legend>¿Tenés tu propio consultorio?*</legend>
+                    <input type="radio" name="consultorio" id="owner" value="owner">
+                    <label for="owner">Si (seas dueño o alquiles un módulo)</label><br>
+                    <input type="radio" name="consultorio" id="notowner" value="notowner">
+                    <label for="notowner">No</label>
+                </fieldset>
+                <fieldset>
+                    <legend>¿Tenés empleados?*</legend>
+                    <input type="radio" name="empleados" id="not" value="not">
+                    <label for="not">No</label><br>
+                    <input type="radio" name="empleados" id="em-1a5" value="em-1a5">
+                    <label for="em-1a5">Si, entre 1 y 5</label><br>
+                    <input type="radio" name="empleados" id="em-5a10" value="em-5a10">
+                    <label for="em-5a10">Si, entre 5 y 10</label><br>
+                    <input type="radio" name="empleados" id="em-10" value="em-10">
+                    <label for="em-10">Si, más de 10</label><br>
+                    <label class="mt-5 block" for="em-text">¿Por qué decidiste inscribirte en el Micromaster Liderazgo y Satisfacción de Pacientes?*</label><br>
+                    <input type="text" id="em-text" name="em-text" placeholder="Tu respuesta" required />
+                </fieldset>
+                <fieldset>
+                    <legend>¿Tiene cuenta de Instagram?*</legend>
+                    <input type="radio" name="instagram" id="ig-yes" value="ig-yes">
+                    <label for="ig-yes">Si</label><br>
+                    <input type="radio" name="instagram" id="ig-not" value="ig-not">
+                    <label for="ig-not">No</label><br>
+                    <label class="mt-5 block" for="ig-text">¿Cuál?*</label><br>
+                    <input type="text" id="ig-text" name="ig-text" placeholder="Tu respuesta" required />
+                </fieldset>
+                <fieldset>
+                    <legend>Quién maneja tu instagram?*</legend>
+                    <input type="radio" name="instagram2" id="ig-I" value="ig-I">
+                    <label for="ig-I">Yo</label><br>
+                    <input type="radio" name="instagram2" id="ig-I2" value="ig-I2">
+                    <label for="ig-I2">Una agencia / comunity manager</label><br>
+                    <label class="mt-5 block" for="ig-text2">¿Cuál?*</label><br>
+                    <input type="text" id="ig-text2" name="ig-text2" placeholder="Tu respuesta" required />
+                </fieldset>
+                <fieldset>
+                    <legend>¿Cuál es tu forma de trabajo?*</legend>
+                    <input type="radio" name="trabajo" id="particular" value="particular">
+                    <label for="particular">Particular</label><br>
+                    <input type="radio" name="trabajo" id="social" value="social">
+                    <label for="social">Prepaga / Obra social</label><br>
+                    <input type="radio" name="trabajo" id="mixto" value="mixto">
+                    <label for="mixto">Mixto</label><br>
+                </fieldset>
+                <fieldset>
+                    <legend>¿Si es mixto, aproximadamente como es la relación entre privado y prepaga?*</legend>
+                    <input type="radio" name="prepaga" id="80%" value="80%">
+                    <label for="80%">80% prepara 20% privado</label><br>
+                    <input type="radio" name="prepaga" id="50%" value="50%">
+                    <label for="50%">50%/50%</label><br>
+                    <input type="radio" name="prepaga" id="20%" value="20%">
+                    <label for="20%">20% pregaga 80% particular</label><br>
+                </fieldset>
+                <fieldset>
+                    <legend>¿Cómo escuchaste sobre este programa?*</legend>
+                    <input type="radio" name="programa" id="colega" value="colega">
+                    <label for="colega">Un colega me lo recomendó</label><br>
+                    <input type="radio" name="programa" id="publicidad" value="publicidad">
+                    <label for="publicidad">Publicidad en Instagram</label><br>
+                    <input type="radio" name="programa" id="google" value="google">
+                    <label for="google">Google</label><br>
+                    <input type="radio" name="programa" id="paz" value="paz">
+                    <label for="paz">La seguía a Paz en Instagram</label><br>
+                    <div class="flex">
+                        <input class="!mr-[.8rem]" type="radio" name="programa" id="otr3I" value="otro3">
+                        <label for="otro3">Otro:</label>
+                        <input type="text" id="otro3" class="ml-2" name="programa-text" />
+                    </div>
+                </fieldset>
+                <button class="center py-2 px-10 mt-10 rounded-full bg-[var(--accent)] text-white font-bold w-full md:w-auto">Inscribirme y pagar</button>
+            </form>  
+        </div>
+    </section>
+</dialog>
+
+<style>
+
+    dialog:modal {
+    max-width: 100vw;
+    max-height: 100vh;
+    }
+
+    form input {
+        margin-bottom: .8rem;
+    }
+
+    form :is(input[type=text], input[type=tel], input[type=email] ) {
+        border-right: none;
+        border-left: none;
+        border-top: none;
+        border-bottom: 1px solid #9F9F9F;
+        display:block; 
+        width: 100%;
+    }
+
+    form input[type=radio] {
+        margin-right: .5rem;
+    }
+
+    form .otro input[type=text] {
+        display:inline; 
+        width: 100%;
+    }
+
+    form input[type=text]:target {
+        border: none;
+    }
+</style>
+
+<script>
+      var openModal = document.querySelectorAll('[data-id="openModal"]');
+      var closeModal = document.querySelector('[data-id="closeModal"]');
+      var favDialog = document.querySelector("dialog") as HTMLDialogElement
+
+      document.addEventListener("click", (event: Event) => {
+        if(event.target && 
+          (event.target as HTMLElement).matches("dialog") ||
+          (event.target as HTMLElement).matches(".dialog-bg") ){
+            CloseModal()
+        }
+      })
+  
+      // Update button opens a modal dialog
+    openModal?.forEach(btn => {
+        btn.addEventListener("click", function () {
+            document.body.style.overflow = "hidden"
+            favDialog?.showModal();
+        })
+    })
+
+      // Form cancel button closes the dialog box
+      closeModal?.addEventListener("click", function () {
+        CloseModal()
+      });
+      
+      const CloseModal = () => {
+        document.body.style.overflow = "auto"
+        favDialog.close();
+      }
+
+  </script>
