@@ -7,7 +7,7 @@ import AnchorIcon from "./AnchorIcon";
 
 export default function App({ accordionData }) {
   return (
-    <Accordion className="accordion" defaultExpandedKeys={["1"]}>
+    <Accordion className="accordion animation" defaultExpandedKeys={["1"]}>
       {accordionData?.map(({ id, title, preTitle, content }) => (
         <AccordionItem
           key={id}

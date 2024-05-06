@@ -11,9 +11,9 @@ const {head, text, list} = PerfiltData
 ---
 
 <section class="perfil 2xl:max-w-screen-xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-screen-sm m-auto my-20 md:my-32 px-6">
-  <h2 class="text-5xl text-[color:var(--accent)] font-medium mb-8">{head}</h2>
-  <p class="italic leading-[1.3] text-xl lora">{text}</p>
-  <ul class="flex [&>li]:sm:w-1/3 [&>li]:sm:pr-12 [&>li]:mt-8 [&>li]:italic [&>li]:text-xl [&>li]:sm:text-base sm:flex-wrap sm:flex-row flex-col mt-8">
+  <h2 class="text-5xl text-[color:var(--accent)] font-medium mb-8 animation">{head}</h2>
+  <p class="italic leading-[1.3] text-xl lora animation">{text}</p>
+  <ul class="flex [&>li]:sm:w-1/3 [&>li]:sm:pr-12 [&>li]:mt-8 [&>li]:italic [&>li]:text-xl [&>li]:sm:text-base sm:flex-wrap sm:flex-row flex-col mt-8 animation">
     {list?.map(item=> (
       <li><Start class="w-4 mb-2"/>{item}</li>
     ))}

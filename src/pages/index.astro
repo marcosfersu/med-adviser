@@ -17,16 +17,39 @@ import Form from '../components/Form.astro';
 <Layout title="Practice Growth Bootcamp">
     <Form />
 	<main>
-    <Hero HeroData={HeroData} />
-    <InfoShort InfoShortData={InfoShortData} />
-    <ImgFull class="md:px-10 px-5" img={ImagFullOne.img} alt={ImagFullOne.alt} /> 
-    <Fundamentals FundamentalsData={FundamentalsData} />
-    <Goals GoalData={GoalData} /> 
-    <ProgramList ProgramListData={ProgramListData} />
-    <Perfil PerfiltData={PerfiltData} />
-    <ImgFull img={ImagFullTwo.img} alt={ImagFullTwo.alt} /> 
-    <StudyPlan StudyPlanData={StudyPlanData} />
-    <About AboutData={AboutData} />
+        <Hero HeroData={HeroData} />
+        <InfoShort InfoShortData={InfoShortData} />
+        <ImgFull class="md:px-10 px-5" img={ImagFullOne.img} alt={ImagFullOne.alt} /> 
+        <Fundamentals FundamentalsData={FundamentalsData} />
+        <Goals GoalData={GoalData} /> 
+        <ProgramList ProgramListData={ProgramListData} />
+        <Perfil PerfiltData={PerfiltData} />
+        <ImgFull img={ImagFullTwo.img} alt={ImagFullTwo.alt} /> 
+        <StudyPlan StudyPlanData={StudyPlanData} />
+        <About AboutData={AboutData} />
 	</main>
 </Layout>
 
+<script>
+const the_animation = document.querySelectorAll('.animation')
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("animate-fade-up", "animate-duration-700", "animate-ease-in-out", "animate-fill-both")
+        }
+            else {
+                //entry.target.classList.remove("animate-fade-up", "animate-duration-700", "animate-ease-in-out", "animate-fill-both")
+            }
+        
+    })
+},
+   { threshold: 0.5
+   });
+
+  for (let i = 0; i < the_animation.length; i++) {
+   const elements = the_animation[i];
+    observer.observe(elements);
+  } 
+
+</script>

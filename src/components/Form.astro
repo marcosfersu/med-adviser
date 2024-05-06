@@ -198,6 +198,15 @@ import Cross from './icons/Cross.astro'
     form input[type=text]:target {
         border: none;
     }
+
+    form input:focus {
+        outline: none;
+        border-bottom: 1px solid #000;
+    }
+
+    input[type="radio"] {
+        accent-color: var(--accent);
+    }
 </style>
 
 <script>
