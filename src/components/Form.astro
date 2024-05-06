@@ -5,7 +5,7 @@ import Cross from './icons/Cross.astro'
 <dialog class="m-auto border-none bg-black/60 inset-0 fixed w-full h-full left-0 top-0 z-[9999] overflow-y-scroll">
     <button data-id="closeModal" type="reset" class="fixed right-0 top-0 lg:-translate-x-10 -translate-x-2 lg:translate-y-5 translate-y-2"><Cross /></button>
     <section class="w-full dialog-bg">
-        <div class="lg:max-w-[50rem] lg:w-auto w-full m-auto bg-white lg:p-16 px-5 pb-10 pt-16 my-0 lg:my-20 rounded-md">
+        <div class="form-container lg:max-w-[50rem] lg:w-auto w-full m-auto bg-white lg:p-16 px-5 pb-10 pt-16 my-0 lg:my-20 rounded-md">
             <div class="mb-10">
                 <p class="lora italic text-[color:var(--accent)] font-medium text-xl mb-3">Inscripción Practice Growth Bootcamp</p>
                 <h3 class="lora text-3xl mb-3">Estas a punto de dar el gran paso hacia el crecimiento de tu consultorio</h3>
@@ -142,6 +142,37 @@ import Cross from './icons/Cross.astro'
     max-height: 100vh;
     }
 
+    dialog[open] {
+        animation: show-modal .5s forwards;
+    }
+
+    dialog[close] {
+        animation: hide-modal .5s forwards;
+    }
+
+    dialog[open] .form-container {
+        animation: show-modal .3s .3s both;
+    }
+
+    @keyframes show-modal {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+    @keyframes hide-modal {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
     form input {
         margin-bottom: .8rem;
     }
@@ -170,9 +201,9 @@ import Cross from './icons/Cross.astro'
 </style>
 
 <script>
-      var openModal = document.querySelectorAll('[data-id="openModal"]');
-      var closeModal = document.querySelector('[data-id="closeModal"]');
-      var favDialog = document.querySelector("dialog") as HTMLDialogElement
+      const openModal = document.querySelectorAll('[data-id="openModal"]');
+      const closeModal = document.querySelector('[data-id="closeModal"]');
+      const dialog = document.querySelector("dialog") as HTMLDialogElement
 
       document.addEventListener("click", (event: Event) => {
         if(event.target && 
@@ -186,7 +217,7 @@ import Cross from './icons/Cross.astro'
     openModal?.forEach(btn => {
         btn.addEventListener("click", function () {
             document.body.style.overflow = "hidden"
-            favDialog?.showModal();
+            dialog?.showModal();
         })
     })
 
@@ -197,7 +228,11 @@ import Cross from './icons/Cross.astro'
       
       const CloseModal = () => {
         document.body.style.overflow = "auto"
-        favDialog.close();
+        dialog?.setAttribute("close", "")
+        dialog?.addEventListener("animationend" , ()=> {
+            dialog?.removeAttribute("close")
+            dialog?.close();
+        },{once: true} )
       }
 
   </script>
