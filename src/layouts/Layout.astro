@@ -23,7 +23,7 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/favicon2.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -32,10 +32,10 @@ const { title } = Astro.props;
 		<slot />
 		<footer>
 			<div class="2xl:max-w-screen-xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-screen-sm m-auto md:my-20 my-14 flex md:flex-row flex-col px-6 justify-between">
-				<ul class="flex md:flex-row flex-col md:gap-10 gap-6 md:mb-0 mb-10">
-					<li><a target="_blank" href="https://medadviser.com.ar/" class="italic">MedAdviser.com.ar</a></li>
-					<li><a target="_blank" href="mailto:info@pazmartorell.com.ar" class="italic">info@pazmartorell.com.ar</a></li>
-					<li><a target="_blank" href="https://wa.me/5491124748639" class="italic">+54 9 11 2474-8639</a></li>
+				<ul class="flex md:flex-row flex-col md:gap-10 gap-6 md:mb-0 mb-10 lora">
+					<li><a target="_blank" href="https://medadviser.com.ar/" class="italic lora">MedAdviser.com.ar</a></li>
+					<li><a target="_blank" href="mailto:info@pazmartorell.com.ar" class="italic lora">info@pazmartorell.com.ar</a></li>
+					<li><a target="_blank" href="https://wa.me/5491124748639" class="italic lora">+54 9 11 2474-8639</a></li>
 				</ul>
 				<a href="https://www.instagram.com/pazmartorell/" target="_blank" aria-label="Instagram logo">
 					<Instagram />
@@ -61,7 +61,7 @@ const { title } = Astro.props;
 		background: #fff;
 		background-size: 224px;
 	}
-	p, button, a, legend, label, input{
+	p, button, a, legend, label, input, h6{
 		font-family: 'Montserrat', sans-serif;
 	}
 

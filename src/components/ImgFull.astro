@@ -2,6 +2,6 @@
 const { class: className, img, alt, ...rest } = Astro.props
 ---
 
-<section class:list={['w-full lg:h-[50rem]', className]} {...rest}>
+<section class:list={['w-full 3xl:h-[50rem] 2xl:h-[36rem] md:h-[25rem]', className]} {...rest}>
   <img class="object-cover object-right-top w-full h-full" src={img} alt={alt} />
 </section>

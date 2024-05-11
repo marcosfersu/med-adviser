@@ -12,6 +12,7 @@ import Perfil from '../components/Perfil.astro';
 import About from '../components/About.astro';
 import StudyPlan from '../components/StudyPlan.astro';
 import Form from '../components/Form.astro';
+import Comments from '../components/Comments.astro';
 ---
 
 <Layout title="Practice Growth Bootcamp">
@@ -27,6 +28,7 @@ import Form from '../components/Form.astro';
         <ImgFull img={ImagFullTwo.img} alt={ImagFullTwo.alt} /> 
         <StudyPlan StudyPlanData={StudyPlanData} />
         <About AboutData={AboutData} />
+        <Comments />
 	</main>
 </Layout>
 

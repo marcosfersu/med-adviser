@@ -186,7 +186,92 @@ export const AboutData = {
   },
   btn: "Contactar",
   image: {
-    img: "/main-img-4.webp",
+    img: "./main-img-4.webp",
     alt: "Paz Martorell - foto perfil",
   },
 };
+
+export const commentsData = [
+  {
+    id: 1,
+    body: `“Cumplió 100% mis expectativas. Además de muchos conocimientos me llevo la motivación. Compartir experiencias con colegas me hizo sentir que no estoy solo. 
+    Creo que todos los médicos, cualquiera sea la especialidad, deberían hacer este curso. Si todos sabemos más sobre estos temas, vamos a elevar nuestra profesión.”`,
+    autor: `Dr. Santiago Rosales`,
+  },
+  {
+    id: 2,
+    body: `“El programa me permitió saber donde estoy parada y saber qué tengo que hacer para crecer. Me llevo tips super importantes. Me pareció sumamente productivo. Siento que hoy comienza una nueva etapa en mi práctica.”`,
+    autor: `Dra. Aneley Porto`,
+  },
+  {
+    id: 3,
+    body: `Las clases fueron maravillosas. Cada uno desde su experiencia aportó un montón. Sentí que no estoy solo y me llevo mucho para aplicar en mi consultorio.`,
+    autor: `Dr. Pedro Rovere`,
+  },
+  {
+    id: 4,
+    body: `La conocí a Paz por un colega que me recomendó el curso y como era un descreído del Marketing le propuse hacer un vivo en Instagram. Fui muy crítico en el vivo, le dije que el marketing está mal visto en salud pero con las dos o tres respuestas que me dio ya me cautivó y decidí hacer el curso. Fue la mejor decisión que pude haber tomado. No tenía ganas de que terminara.`,
+    autor: `Gustavo di Bella`,
+  },
+  {
+    id: 5,
+    body: `Me llevo muchas herramientas para aplicar. Si bien fue mucha la información que recibí, entendí que se trata de fijar pequeñas metas a corto plazo y de empezar, de dar ese primer paso. Me llevo una nueva forma de hacer medicina. Esto debería ser una materia obligada en la facultad. Me llevo muchas ideas frescas, nuevas que me ayudaron muchísimo.`,
+    autor: `Dra. Veronica Fortuna`,
+  },
+  {
+    id: 6,
+    body: `Vine muy recomendado por el Dr. Flaherty y el curso superó mis expectativas. 
+    Me llevo muchísimos disparadores.`,
+    autor: `Dr. Patricio Cal`,
+  },
+  {
+    id: 7,
+    body: `Me llevo mucho, estoy muy agradecido, no solamente por las clases sino por la experiencia de los colegas. El darme cuenta que les pasa lo mismo que a mi hace que me sienta acompañado. Me llevo un montón y un montón de tarea, tomé nota de todo. Me di cuenta que hay muchísimas cosas que puedo mejorar en mi práctica.`,
+    autor: `Santiago Narvaez`,
+  },
+  {
+    id: 8,
+    body: `Me llevo muchas cosas para hacer, el programa superó mis expectativas. Era exactamente lo que estaba buscando. Con todo lo aprendido arranco el año desde otro lugar.`,
+    autor: `Dr. Maritin Di Lisio`,
+  },
+  {
+    id: 9,
+    body: `Me encantó. Estuve frente a gente experta pero que bajó los conceptos a herramientas simples para que desde lo personal pudiera lograr cambios concretos. Todas las clases fueron muy jugosas y las vi varias veces porque tenían tanto contenido que con una sola vez no me alcanzó.`,
+    autor: `Dra. Fabiana Serpa`,
+  },
+  {
+    id: 10,
+    body: `A los médicos nos da miedo el marketing, la comunicación, son términos muy ajenos a nosotros pero Paz los bajaron a términos muy simples y aplicables con ejemplos concretos.`,
+    autor: `Dra. Priscila Begue Pons`,
+  },
+  {
+    id: 11,
+    body: `A medida que avanzablan las clases, me repetía “a mi me pasa lo mismo”. Me sentí muy identificada con todo lo que vimos. El programa me voló la cabeza. Gracias por abrirme la cabeza. Por primera vez empecé a palpar que tengo una empresa. Entendí que los objetivos se renuevan cada año, te vas planteando nuevos desafíos y esto no tiene fin. Me hicieron plantearme muchas cosas y por eso estoy super agradecida.`,
+    autor: `Dra. Natalia`,
+  },
+  {
+    id: 12,
+    body: `Me entusiasmó mucho y me ayudó a animarme a dar el salto que hace tiempo estoy pensando dar.`,
+    autor: `Dra. Carolina Lopez Santoro`,
+  },
+  {
+    id: 13,
+    body: `El programa es una bomba. Me ayudó a ser más efectiva. Estoy muy agradecida`,
+    autor: `Dra. Dora Lila`,
+  },
+  {
+    id: 14,
+    body: `El hecho de haber contactado a Paz fue un paso, hacer el curso fue otro y siento que estoy mucho más cerca de mis objetivos. Siento más cerca cosas que veía muy lejanas. Uno no puede esperar resultados distintos si hace lo mismo asi que me llevé muchas cosas distintas por hacer.`,
+    autor: `Dr. Sebastian Pereira.`,
+  },
+  {
+    id: 15,
+    body: `El curso me permitió agiornarme a los tiempos modernos.`,
+    autor: `Dr. Humberto Jimenez.`,
+  },
+  {
+    id: 16,
+    body: `Desconocía por completo el tema. Ahora siento que se mucho más y me voy motivado. El curso me pareció claro, ordenado.`,
+    autor: `Dr. Ramiro da Rosa`,
+  },
+];
